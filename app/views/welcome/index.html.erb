@@ -2,21 +2,14 @@
 
 <h1>Seja Bem-vindo! <%= @name%> </h1>
 <h2>Curso: <b> <%= @course %> </b> </h2>
+
+<%= render "menu" %>
+
 <p>
   <b>
     Data:  <%= date_pt_br(Date.current) %>
   </b>
 </p>
-
-<p>
-  <a href="/coins" >Cadastro de moedas</a>
-
-  <br>
-
-  <%= link_to "Cadastro de Moedas", coins_path %>
-
-</p>
-
 
 <p>
   Você está em ambiente de <strong><%= rails_env %></strong>
