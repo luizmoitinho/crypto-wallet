@@ -14,10 +14,18 @@ coins = [
 ]
 
 puts "creating coins..."
-
-coins.each do |coin|
-  Coin.create!(coin)
+display_spinner("creating coins ...", "successfully created coins.") do
+  coins.each do |coin|
+    Coin.find_or_create_by!(coin)
+  end
 end
 
-puts "successfully created coins."
 
+def display_spinner(message_start, message_end = "done!")
+  spinner = TTY::Spinner.new("[:spinner] #{message_start}", format: :pulse_2)
+  spinner.auto_spin
+
+  yield
+
+  spinner.success(message_end)
+end
