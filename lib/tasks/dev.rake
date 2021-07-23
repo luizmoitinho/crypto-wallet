@@ -3,28 +3,35 @@ namespace :dev do
   task setup: :environment do
     if Rails.env.development?
 
-      spinner = TTY::Spinner.new("[:spinner] drop database ...", format: :pulse_2)
-      spinner.auto_spin
-      %x(rails db:drop)
-      spinner.success("done!")
+      display_spinner("drop database ...") {
+        %x(rails db:drop)
+    }
 
-      spinner = TTY::Spinner.new("[:spinner] create database ...", format: :pulse_2)
-      spinner.auto_spin
-      %x(rails db:create )
-      spinner.success("done!")
+    display_spinner("create database ...") {
+        %x(rails db:create)
+    }
 
-      spinner = TTY::Spinner.new("[:spinner] running migrates ...", format: :pulse_2)
-      spinner.auto_spin
-      %x(rails db:migrate)
-      spinner.success("done!")
+      display_spinner("running migrates ...") do
+        %x(rails db:migrate)
+      end
 
-      spinner = TTY::Spinner.new("[:spinner] running seeds ...", format: :pulse_2)
-      spinner.auto_spin
-      %x(rails db:seed)
-      spinner.success("done!")
+      display_spinner("running seeds ...") do
+        %x(rails db:seed)
+      end
+
 
     else
       puts "you are not using development enviroment"
     end
   end
+
+  def display_spinner(message_start, message_end = "done!")
+    spinner = TTY::Spinner.new("[:spinner] #{message_start}", format: :pulse_2)
+    spinner.auto_spin
+
+    yield
+
+    spinner.success(message_end)
+  end
+
 end
