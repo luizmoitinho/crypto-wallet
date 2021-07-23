@@ -3,7 +3,7 @@ namespace :dev do
   task setup: :environment do
     if Rails.env.development?
 
-      display_spinner("drop database ...") {
+    display_spinner("drop database ...") {
         %x(rails db:drop)
     }
 
@@ -11,13 +11,13 @@ namespace :dev do
         %x(rails db:create)
     }
 
-      display_spinner("running migrates ...") do
-        %x(rails db:migrate)
-      end
+    display_spinner("running migrates ...") do
+      %x(rails db:migrate)
+    end
 
-      display_spinner("running seeds ...") do
-        %x(rails db:seed)
-      end
+    display_spinner("running seeds ...") do
+      %x(rails db:seed)
+    end
 
 
     else
@@ -25,13 +25,14 @@ namespace :dev do
     end
   end
 
-  def display_spinner(message_start, message_end = "done!")
-    spinner = TTY::Spinner.new("[:spinner] #{message_start}", format: :pulse_2)
-    spinner.auto_spin
+  private
+    def display_spinner(message_start, message_end = "done!")
+      spinner = TTY::Spinner.new("[:spinner] #{message_start}", format: :pulse_2)
+      spinner.auto_spin
 
-    yield
+      yield
 
-    spinner.success(message_end)
-  end
+      spinner.success(message_end)
+    end
 
 end
