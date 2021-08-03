@@ -15,9 +15,10 @@ namespace :dev do
       %x(rails db:migrate)
     end
 
+    %x(rails dev:create_mining_types)
+
     %x(rails dev:create_coins)
 
-    %x(rails dev:create_mining_types)
 
 
     else
@@ -29,11 +30,36 @@ namespace :dev do
   desc "create coins"
   task create_coins: :environment do
     coins = [
-      { description: "Bitcoin",   acronym: "BTC",   url_image: "https://logosmarcas.net/wp-content/uploads/2020/08/Bitcoin-Logo.png" },
-      { description: "Ethereum",  acronym: "ETH",   url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo.png" },
-      { description: "Dash",      acronym: "DASH",  url_image: "https://cryptologos.cc/logos/dash-dash-logo.png" },
-      { description: "Iota",      acronym: "IOT",   url_image: "https://www.iconpacks.net/icons/2/free-iota-coin-icon-2220-thumb.png" },
-      { description: "ZCash",     acronym: "ZEC",   url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Zcash-ZEC-icon.png" },
+      {
+        description: "Bitcoin",
+        acronym: "BTC",
+        url_image: "https://logosmarcas.net/wp-content/uploads/2020/08/Bitcoin-Logo.png",
+        mining_type: MiningType.find_by(acronym: 'PoW') #  mining_type: MiningType.where(acronym: 'PoW').first
+      },
+      {
+        description: "Ethereum",
+        acronym: "ETH",
+        url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo.png",
+        mining_type: MiningType.all.sample
+      },
+      {
+        description: "Dash",
+        acronym: "DASH",
+        url_image: "https://cryptologos.cc/logos/dash-dash-logo.png",
+        mining_type: MiningType.all.sample
+       },
+      {
+        description: "Iota",
+        acronym: "IOT",
+        url_image: "https://www.iconpacks.net/icons/2/free-iota-coin-icon-2220-thumb.png",
+        mining_type: MiningType.all.sample
+      },
+      {
+        description: "ZCash",
+        acronym: "ZEC",
+        url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Zcash-ZEC-icon.png",
+        mining_type: MiningType.all.sample
+      },
     ]
 
     puts "creating coins..."
