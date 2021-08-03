@@ -47,9 +47,9 @@ namespace :dev do
   desc "create mining types"
   task create_mining_types: :environment do
     mining_types = [
-      {name: "Proof Of Work", acronym: "PoW"},
-      {name: "Proof Of Stake", acronym: "PoS"},
-      {name: "Proof Of Capacity", acronym: "PoC"},
+      {description: "Proof Of Work", acronym: "PoW"},
+      {description: "Proof Of Stake", acronym: "PoS"},
+      {description: "Proof Of Capacity", acronym: "PoC"},
     ]
 
     puts "creating mining types..."
