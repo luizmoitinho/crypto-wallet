@@ -1,7 +1,7 @@
 
 
 <h1>Seja Bem-vindo! <%= @name%> </h1>
-<p> Idioma da aplicação: <%= get_language() =%>
+<p> Idioma da aplicação: <%= t('actual_locale') =%>
 <h2>Curso: <b> <%= @course %> </b> </h2>
 
 <%= render "menu" %>
