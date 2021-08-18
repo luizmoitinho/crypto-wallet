@@ -3,7 +3,11 @@ pt-BR:
     edit: 'Editar'
     show: 'Mostrar'
     delete: 'Apagar'
-  acronym: 'Sigla'
-  coins: 'Moedas'
-  descrption: 'Descrição'
-  mining_types: "Tipos de Mineração"
+    new: 'Novo'
+  form:
+    confirm_action: 'Tem certeza que deseja continuar?'
+    acronym: 'Sigla'
+    coins: 'Moedas'
+    description: 'Descrição'
+    image: 'Imagem'
+    mining_types: "Tipos de Mineração"

@@ -35,3 +35,11 @@ en:
     edit: 'Edit'
     show: 'Show'
     delete: 'Delete'
+    new: 'New'
+  form:
+    confirm_action: 'Are you sure you want to continue?'
+    acronym: 'Acronym'
+    coins: 'Coins'
+    description: 'Description'
+    image: 'Image'
+    mining_types: "Mining Types"
