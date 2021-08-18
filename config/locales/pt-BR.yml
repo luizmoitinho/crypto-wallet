@@ -6,8 +6,4 @@ pt-BR:
     new: 'Novo'
   form:
     confirm_action: 'Tem certeza que deseja continuar?'
-    acronym: 'Sigla'
-    coins: 'Moedas'
-    description: 'Descrição'
-    image: 'Imagem'
-    mining_types: "Tipos de Mineração"
+
