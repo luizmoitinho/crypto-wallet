@@ -18,4 +18,9 @@ module WelcomeHelper
       "Teste"
     end
   end
+
+  def get_language()
+    I18n.locale == :en ? "Inglês" : 'Português (Brasil)'
+  end
+
 end
