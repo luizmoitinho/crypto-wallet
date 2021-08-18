@@ -1,0 +1,9 @@
+pt-BR:
+  links:
+    edit: 'Editar'
+    show: 'Mostrar'
+    delete: 'Apagar'
+  acronym: 'Sigla'
+  coins: 'Moedas'
+  descrption: 'Descrição'
+  mining_types: "Tipos de Mineração"
