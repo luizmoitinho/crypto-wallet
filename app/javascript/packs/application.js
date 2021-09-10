@@ -8,6 +8,11 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+//= require jquery
+//= require notify-js-legacy/notify
+//= require bootstrap
+//= require popper.js
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
