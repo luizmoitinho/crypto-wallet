@@ -5,6 +5,7 @@ pt-BR:
     show: 'Mostrar'
     delete: 'Apagar'
     new: 'Novo'
+    back: 'Voltar'
   form:
     confirm_action: 'Tem certeza que deseja continuar?'
 

@@ -36,6 +36,7 @@ en:
     show: 'Show'
     delete: 'Delete'
     new: 'New'
+    back: 'Back'
   form:
     confirm_action: 'Are you sure you want to continue?'
     acronym: 'Acronym'
