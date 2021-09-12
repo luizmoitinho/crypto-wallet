@@ -1,8 +1,5 @@
 
-
-<ul>
-
-  <li>   <%= link_to "Moedas", coins_path %> </li>
-  <li>   <%= link_to "Tipo de Mineração", mining_types_path %> </li>
-
-</ul>
+  <div class="d-flex">
+    <%= link_to "Moedas", coins_path, class: "btn btn-primary-2 m-2" %>
+    <%= link_to "Tipo de Mineração", mining_types_path, class:"btn btn-secondary-2 m-2" %>
+  </div>
