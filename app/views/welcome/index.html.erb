@@ -1,20 +1,10 @@
-<p>
-  <%= link_to 'Português', root_path(locale: 'pt-BR')%> |
-  <%= link_to 'Ingles',  root_path(locale: 'en')%>
-</p>
 
-<h1>Seja Bem-vindo! <%= @name%> </h1>
-<p> Idioma da aplicação: <%= t('actual_locale') =%>
-<h2>Curso: <b> <%= @course %> </b> </h2>
-
-<%= render "menu" %>
-
-<p class="pos-demo">
-  <b>
-    Data:  <%= date_pt_br(Date.current) %>
-  </b>
-</p>
-
-<p>
-  Você está em ambiente de <strong><%= rails_env %></strong>
-</p>
+<div class="col-md-12">
+  <h1 class="fw-lighter"> Crypto Wallet</h1>
+  <h5>A plataforma para cadastro e gerenciamento de criptomoedas</h2>
+  <hr>
+  <div class="d-flex">
+    <button type="button" class="btn btn-primary-2 m-2">Moedas</button>
+    <button type="button" class="btn btn-secondary-2 m-2">Tipos de Mineração</button>
+  </div>
+</div>
