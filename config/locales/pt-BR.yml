@@ -8,4 +8,6 @@ pt-BR:
     back: 'Voltar'
   form:
     confirm_action: 'Tem certeza que deseja continuar?'
-
+  welcome:
+    title: 'Crypto Wallet'
+    subtitle: 'A plataforma para cadastro e gerenciamento de criptomoedas'

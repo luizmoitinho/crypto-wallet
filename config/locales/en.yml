@@ -44,3 +44,6 @@ en:
     description: 'Description'
     image: 'Image'
     mining_types: "Mining Types"
+  welcome:
+      title: 'Crypto Wallet'
+      subtitle: 'The platform for registration and management of cryptocurrencies'
