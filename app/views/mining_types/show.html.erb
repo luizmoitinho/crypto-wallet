@@ -4,27 +4,16 @@
 <fieldset disabled>
 
   <div class="mb-3">
-    <%= form.label :description %>
-    <%= form.text_field :description, class:"form-control", placeholder:"Proof Of Woork" %>
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:description), :class => "form-label"  %>
+    <%= text_field_tag nil, @mining_type.description, class:"form-control", placeholder:"Proof Of Woork" %>
   </div>
 
   <div class="mb-3">
-  <%= form.label :acronym %>
-    <%= form.text_field :acronym,  class:"form-control", placeholder:"PoW"  %>
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:acronym), :class => "form-label" %>
+    <%= text_field_tag nil, @mining_type.acronym,  class:"form-control" %>
   </div>
 
-
-
 </fieldset>
-<p>
-  <strong><%= @mining_type.human_attribute_name('description') %>:</strong>
-  <%= @mining_type.description %>
-</p>
-
-<p>
-  <strong><%= @mining_type.human_attribute_name('acronym') %>:</strong>
-  <%= @mining_type.acronym %>
-</p>
 
 
 <%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class: "btn btn-primary-2 m-2" %>
