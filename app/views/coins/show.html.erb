@@ -4,22 +4,22 @@
 
   <div class="mb-3">
     <%= label_tag nil,  @coin.class.human_attribute_name(:description), :class => "form-label" %>
-    <%= text_field_tag nil, @coin.acronym, class:"form-control disabled", placeholder:"Bitcoin" %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control disabled", placeholder:"Bitcoin", disabled:"true" %>
   </div>
 
   <div class="mb-3">
     <%= label_tag nil, @coin.class.human_attribute_name(:acronym), :class => "form-label" %>
-    <%= text_field_tag nil, @coin.description,  class:"form-control", placeholder: "BTC" %>
+    <%= text_field_tag nil, @coin.description,  class:"form-control", placeholder: "BTC",disabled:"true" %>
   </div>
 
   <div class="mb-3">
     <%= label_tag nil, @coin.class.human_attribute_name(:url_image), :class => "form-label" %>
-    <%= text_field_tag nil, @coin.url_image, class:"form-control col-md-2", placeholder:"http://img.ur/bitcoin.png" %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control col-md-2", placeholder:"http://img.ur/bitcoin.png", disabled:"true" %>
   </div>
 
   <div class="mb-3">
     <%= label_tag nil,  @coin.class.human_attribute_name(:mining_type), :class => "form-label" %>
-    <%= text_field_tag nil,  @coin.mining_type.description, class:"form-control col-md-2", placeholder:"http://img.ur/bitcoin.png" %>
+    <%= text_field_tag nil,  @coin.mining_type.description, class:"form-control col-md-2", placeholder:"http://img.ur/bitcoin.png",disabled:"true" %>
   </div>
 
 </fieldset>
