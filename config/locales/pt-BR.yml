@@ -6,8 +6,18 @@ pt-BR:
     delete: 'Apagar'
     new: 'Novo'
     back: 'Voltar'
+  new:
+    coin: 'Nova Moeda'
+    mining_type: 'Novo Tipo de Mineração'
+  edit:
+    coin: 'Editar Moeda'
+    mining_type: 'Editar Tipo de Mineração'
+  delte:
+    coin: 'Remover Moeda'
+    mining_type: 'Remover Tipo de Mineração'
   form:
     confirm_action: 'Tem certeza que deseja continuar?'
   welcome:
     title: 'Crypto Wallet'
     subtitle: 'A plataforma para cadastro e gerenciamento de criptomoedas'
+

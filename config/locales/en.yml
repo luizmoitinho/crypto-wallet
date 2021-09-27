@@ -47,3 +47,12 @@ en:
   welcome:
       title: 'Crypto Wallet'
       subtitle: 'The platform for registration and management of cryptocurrencies'
+  new:
+    coin: 'New Coin'
+    mining_type: 'New Mingin Type'
+  edit:
+    coin: 'Edit Coin'
+    mining_type: 'Edit Mining Type'
+  delte:
+    coin: 'Delete Coin'
+    mining_type: 'Delete Mining Type'
