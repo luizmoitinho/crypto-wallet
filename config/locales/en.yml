@@ -49,7 +49,7 @@ en:
       subtitle: 'The platform for registration and management of cryptocurrencies'
   new:
     coin: 'New Coin'
-    mining_type: 'New Mingin Type'
+    mining_type: 'New Mining Type'
   edit:
     coin: 'Edit Coin'
     mining_type: 'Edit Mining Type'
